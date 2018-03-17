@@ -13,8 +13,8 @@
 namespace sio
 {
     using namespace std;
-    
-    class packet
+
+	class packet
     {
     public:
         enum frame_type

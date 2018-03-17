@@ -8,12 +8,17 @@
 #define SIO_CLIENT_H
 #include <string>
 #include <functional>
+#include <vector>
 #include "sio_message.h"
 #include "sio_socket.h"
+#include <rapidjson/document.h>
+using namespace rapidjson;
 
 namespace sio
 {
     class client_impl;
+
+	message::ptr from_json(Value const& value, std::vector<std::shared_ptr<const std::string> > const& buffers);
     
     class client {
     public:
