@@ -51,7 +51,7 @@ namespace sio
         vector<shared_ptr<const string> > _buffers;
     public:
         packet(string const& nsp,message::ptr const& msg,int pack_id = -1,bool isAck = false);//message type constructor.
-        
+
         packet(frame_type frame);
         
         packet(type type,string const& nsp= string(),message::ptr const& msg = message::ptr());//other message types constructor.

@@ -132,7 +132,7 @@ namespace sio
         void close();
         
         void emit(std::string const& name, message::list const& msglist, std::function<void (message::list const&)> const& ack);
-        
+
         std::string const& get_namespace() const {return m_nsp;}
         
     protected:
@@ -263,7 +263,7 @@ namespace sio
         packet p(m_nsp, msg_ptr,pack_id);
         send_packet(p);
     }
-    
+
     void socket::impl::send_connect()
     {
         NULL_GUARD(m_client);

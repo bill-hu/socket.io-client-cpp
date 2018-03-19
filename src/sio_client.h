@@ -18,7 +18,8 @@ namespace sio
 {
     class client_impl;
 
-	message::ptr from_json(Value const& value, std::vector<std::shared_ptr<const std::string> > const& buffers);
+	message::ptr from_json(Value const& value, std::vector<std::shared_ptr<const std::string> > const& buffers = std::vector<std::shared_ptr<const std::string> >());
+	std::string to_json(message const &msg);
     
     class client {
     public:
